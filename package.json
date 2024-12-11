@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.146",
+    "@types/node": "^22.7.5",
+    "esbuild": "^0.24.0",
+    "gts": "^6.0.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "fix": "gts fix",
+    "build": "node esbuild.config.js",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "fs": "^0.0.1-security",
+    "playwright-core": "^1.49.1"
+  }
+}
