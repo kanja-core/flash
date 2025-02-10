@@ -8,6 +8,7 @@ npm-debug.log*
 
 # Environment files
 .env
+docker.env
 
 # Build output
 dist/
@@ -28,3 +29,5 @@ Thumbs.db
 
 # Other
 coverage/
+dist/
+env.nosync/

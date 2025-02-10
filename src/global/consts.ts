@@ -5,17 +5,17 @@ const envChecker = (ENV_VAR: string | undefined, name: string) => {
   return ENV_VAR;
 };
 
-export const captchaActionName = 'captcha';
-export const captchaFillName = 'fillCaptcha';
+// export const captchaActionName = 'captcha';
+// export const captchaFillName = 'fillCaptcha';
 
 export const browserConnectionURL = envChecker(
   process.env.BROWSER_CONNECTION_URL,
   'BROWSER_CONNECTION_URL',
 );
 
-export const CaptchaApiKey = envChecker(
-  process.env.CAPTCHA_API_KEY,
-  'CAPTCHA_API_KEY',
-);
+// export const CaptchaApiKey = envChecker(
+//   process.env.CAPTCHA_API_KEY,
+//   'CAPTCHA_API_KEY',
+// );
 
-export const CaptchaApiURL = 'https://api.2captcha.com/';
+// export const CaptchaApiURL = 'https://api.2captcha.com/';

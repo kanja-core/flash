@@ -15,7 +15,8 @@ const actions: BotAction[] = [
   },
   {
     type: 'goto',
-    selector: url,
+    selector:
+      'https://www10.fazenda.sp.gov.br/CertidaoNegativaDeb/Pages/EmissaoCertidaoNegativa.aspx',
   },
   {
     type: 'screenshot',
@@ -57,14 +58,11 @@ const actions: BotAction[] = [
   {
     type: 'download',
     selector: '#MainContent_btnImpressao',
-    value: 'pdf/www10.fazenda.sp.gov.br.pdf',
+    value: '/tmp/file.pdf',
   },
 ];
 
 bot
-  .run({
-    siteURL: url,
-    actions,
-  })
+  .run(actions)
   .then(() => console.log('Bot finished'))
   .catch(err => console.error(err));

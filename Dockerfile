@@ -12,7 +12,7 @@ RUN npm install --omit=dev
 
 COPY dist/ .
 
-COPY .env ./
+COPY docker.env .env
 
 CMD ["index.handler"]
 
