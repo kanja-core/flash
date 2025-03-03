@@ -1,6 +1,6 @@
 // https://solucoes.receita.fazenda.gov.br/servicos/certidaointernet/pf/emitir
 import 'dotenv/config';
-import {BotAction, captchaFillName} from '../../src/global';
+import {BotAction} from '../../src/global';
 import {BotCaptchaServiceFactory} from '../../src/modules/bot';
 
 const url =
@@ -9,7 +9,8 @@ const bot = BotCaptchaServiceFactory();
 
 const actions: BotAction[] = [
   {
-    type: 'disableCaptchaAutoSolve',
+    type: 'disableAutoSolve',
+    class: 'captcha',
   },
   {
     type: 'goto',
@@ -33,7 +34,8 @@ const actions: BotAction[] = [
     timeout: 500,
   },
   {
-    type: 'solveCaptcha',
+    type: 'solve',
+    class: 'captcha',
   },
   {
     type: 'screenshot',
@@ -47,16 +49,14 @@ const actions: BotAction[] = [
     type: 'screenshot',
     value: 'img/end.png',
   },
-  // {
-  //   type: 'download',
-  //   selector: '/Servicos/certidaointernet/pf/Emitir/EmProcessamento',
-  // },
+  {
+    type: 'download',
+    selector: '/Servicos/certidaointernet/pf/Emitir/EmProcessamento',
+    value: '/tmp/file.pdf',
+  },
 ];
 
 bot
-  .run({
-    siteURL: url,
-    actions,
-  })
+  .run(actions)
   .then(() => console.log('Bot finished'))
   .catch(err => console.error(err));

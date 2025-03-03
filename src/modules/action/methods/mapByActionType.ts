@@ -30,6 +30,7 @@ export async function mapByActionType(
         throw new Error('Selector and value are required for download action');
       return download(this.page, this.client, action.selector, action.value);
     default:
+      console.log(action.type);
       throw new Error('Invalid action type');
   }
 }

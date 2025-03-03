@@ -13,6 +13,11 @@ export const browserConnectionURL = envChecker(
   'BROWSER_CONNECTION_URL',
 );
 
+export const OPENAI_API_KEY = envChecker(
+  process.env.OPENAI_API_KEY,
+  'OPENAI_API_KEY',
+);
+
 // export const CaptchaApiKey = envChecker(
 //   process.env.CAPTCHA_API_KEY,
 //   'CAPTCHA_API_KEY',
