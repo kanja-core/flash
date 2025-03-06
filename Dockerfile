@@ -29,7 +29,7 @@ CMD ["index.handler"]
 #   --function-name bot-instance-test \
 #   --package-type Image \
 #   --code ImageUri=474668394551.dkr.ecr.us-east-2.amazonaws.com/scraper:v1 \
-#   --role arn:aws:iam::474668394551:role/scraper_lambda_deploy \
+#   --role arn:aws:iam::HERE \
 #   --architectures x86_64
 
 # aws lambda invoke --function-name bot-instance-test response.json
