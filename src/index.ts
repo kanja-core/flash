@@ -7,6 +7,7 @@ export const handler = async (
   event: APIGatewayEvent,
   context: Context,
 ): Promise<APIGatewayProxyResult> => {
+  console.log('event', event);
   const body =
     typeof event.body === 'string' ? JSON.parse(event.body) : event.body || {};
   const {actions, request_id} = body;
@@ -16,7 +17,10 @@ export const handler = async (
       statusCode: 400,
       body: JSON.stringify({
         message:
-          'Invalid input. `actions` must be an array and `request_id` is required.',
+          `Invalid input. actions must be an array and request_id is required
+          actions: ${typeof actions}, request_id: ${typeof request_id}
+          event: ${JSON.stringify(event, null, 2)}
+          `,
         event: JSON.stringify(event, null, 2),
       }),
     };
@@ -25,13 +29,19 @@ export const handler = async (
   await bot.run(actions);
 
   const rawFile = await fileReaderService('/tmp/file.pdf');
+  console.log(typeof rawFile);
+  console.log(rawFile.length);
+
+  const file = Buffer.from(rawFile).toString('base64');
+  console.log(typeof file);
+  console.log(file.length);
 
   return {
     statusCode: 200,
     body: JSON.stringify(
       {
         request_id,
-        file: rawFile.toString('base64'),
+        file: file,
       },
       null,
       2,

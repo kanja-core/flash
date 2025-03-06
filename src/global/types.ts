@@ -16,7 +16,7 @@ export type BotActionType =
 
 export type BotAction = {
   type: BotActionType;
-  class?: BotActionClass;
+  cat?: BotActionClass;
   selector?: string;
   value?: string;
   timeout?: number;

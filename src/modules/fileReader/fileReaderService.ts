@@ -11,7 +11,7 @@ export async function fileReaderService(
       );
     }
 
-    const fileContent = await fs.readFile(filePath);
+    const fileContent = await fs.readFile(filePath,);
     return fileContent;
   } catch (error) {
     throw new Error(`Failed to read file: ${error}`);

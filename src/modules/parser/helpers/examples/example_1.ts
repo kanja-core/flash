@@ -509,57 +509,57 @@ download my certificate by clicking the imprimir button.
     [
         {
             type: 'disableAutoSolve',
-            class: 'captcha',
+            cat: 'captcha',
         },
         {
             type: 'goto',
-            class: 'default',
+            cat: 'default',
             selector:
             'https://www10.fazenda.sp.gov.br/CertidaoNegativaDeb/Pages/EmissaoCertidaoNegativa.aspx',
         },
         {
             type: 'screenshot',
             value: 'img/start.png',
-            class: 'debug',
+            cat: 'debug',
         },
         {
             type: 'input',
-            class: 'default',
+            cat: 'default',
             selector: '#MainContent_txtDocumento',
             value: '52728162859',
         },
         {
             type: 'screenshot',
             value: 'img/input.png',
-            class: 'debug',
+            cat: 'debug',
         },
         {
             type: 'wait',
-            class: 'default',
+            cat: 'default',
             timeout: 500,
         },
         {
             type: 'solve',
-            class: 'captcha',
+            cat: 'captcha',
         },
         {
             type: 'screenshot',
             value: 'img/captcha.png',
-            class: 'debug',
+            cat: 'debug',
         },
         {
             type: 'wait',
-            class: 'default',
+            cat: 'default',
             timeout: 500,
         },
         {
             type: 'screenshot',
             value: 'img/end.png',
-            class: 'debug',
+            cat: 'debug',
         },
         {
             type: 'download',
-            class: 'default',
+            cat: 'default',
             selector: '#MainContent_btnImpressao',
             value: '/tmp/file.pdf',
         },

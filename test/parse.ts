@@ -7,7 +7,7 @@ The website is https://www10.fazenda.sp.gov.br/CertidaoNegativaDeb/Pages/Emissao
 my cpf is 52728162859.
 You should input the cpf, 
 it will go to a next page, then you should download the pdf, clicking the button with text imprimir.
-Save it to /tmp/yc_certificate.pdf
+Save it to /tmp/file.pdf
 `;
 
 const parser = ParserServiceFactory();

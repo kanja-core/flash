@@ -10,7 +10,7 @@ const bot = BotCaptchaServiceFactory();
 const actions: BotAction[] = [
   {
     type: 'disableAutoSolve',
-    class: 'captcha',
+    cat: 'captcha',
   },
   {
     type: 'goto',
@@ -35,7 +35,7 @@ const actions: BotAction[] = [
   },
   {
     type: 'solve',
-    class: 'captcha',
+    cat: 'captcha',
   },
   {
     type: 'screenshot',

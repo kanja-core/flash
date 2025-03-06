@@ -11,7 +11,7 @@ const bot = BotCaptchaServiceFactory();
 const actions: BotAction[] = [
   {
     type: 'disableAutoSolve',
-    class: 'captcha',
+    cat: 'captcha',
   },
   {
     type: 'goto',
@@ -21,7 +21,7 @@ const actions: BotAction[] = [
   {
     type: 'screenshot',
     value: 'img/start.png',
-    class: 'debug',
+    cat: 'debug',
   },
   {
     type: 'input',
@@ -31,7 +31,7 @@ const actions: BotAction[] = [
   {
     type: 'screenshot',
     value: 'img/input.png',
-    class: 'debug',
+    cat: 'debug',
   },
   {
     type: 'wait',
@@ -39,12 +39,12 @@ const actions: BotAction[] = [
   },
   {
     type: 'solve',
-    class: 'captcha',
+    cat: 'captcha',
   },
   {
     type: 'screenshot',
     value: 'img/captcha.png',
-    class: 'debug',
+    cat: 'debug',
   },
   {
     type: 'wait',
@@ -53,7 +53,7 @@ const actions: BotAction[] = [
   {
     type: 'screenshot',
     value: 'img/end.png',
-    class: 'debug',
+    cat: 'debug',
   },
   {
     type: 'download',

@@ -312,56 +312,56 @@ The website is: solucoes.receita.fazenda.gov.br/Servicos/certidaointernet/pf;
     [
         {
             type: 'disableAutoSolve',
-            class: 'captcha',
+            cat: 'captcha',
         },
         {
             type: 'goto',
-            class: 'default',
+            cat: 'default',
             selector: solucoes.receita.fazenda.gov.br/Servicos/certidaointernet/pf,
         },
         {
             type: 'screenshot',
-            class: 'default',
+            cat: 'default',
             value: 'img/start.png',
         },
         {
             type: 'input',
-            class: 'default',
+            cat: 'default',
             selector: '#NI',
             value: '15358587888',
         },
         {
             type: 'screenshot',
-            class: 'debug',
+            cat: 'debug',
             value: 'img/form.png',
         },
         {
             type: 'wait',
-            class: 'default',
+            cat: 'default',
             timeout: 500,
         },
         {
             type: 'solve',
-            class: 'captcha',
+            cat: 'captcha',
         },
         {
             type: 'screenshot',
-            class: 'debug',
+            cat: 'debug',
             value: 'img/captcha.png',
         },
         {
             type: 'wait',
-            class: 'default',
+            cat: 'default',
             timeout: 1000,
         },
         {
             type: 'screenshot',
-            class: 'debug',
+            cat: 'debug',
             value: 'img/end.png',
         },
         {
             type: 'download',
-            class: 'default',
+            cat: 'default',
             selector: '/Servicos/certidaointernet/pf/Emitir/EmProcessamento',
             value: '/tmp/file.pdf',
         },
