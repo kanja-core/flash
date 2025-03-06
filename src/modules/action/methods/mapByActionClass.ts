@@ -5,7 +5,7 @@ export async function mapByActionClass(
   this: ActionService,
   action: BotAction,
 ): Promise<void> {
-  switch (action.class) {
+  switch (action.cat) {
     case 'captcha':
       return this.captcha.mapByActionType(action);
     case 'debug':

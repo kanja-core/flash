@@ -7,7 +7,7 @@ export async function solve(
   console.log('Solving CAPTCHA...');
   // @ts-ignore
   const {status} = await client.send('Captcha.solve', {
-    detectTimeout: timeout,
+    detectTimeout: timeout || 10 * 1000,
   });
   console.log(`Captcha status: ${status}`);
 }
