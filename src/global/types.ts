@@ -1,4 +1,4 @@
-type BotActionClass = 'captcha' | 'debug';
+type BotActionClass = 'captcha' | 'debug' | 'default';
 
 type BotActionCaptchaType = 'wait' | 'solve' | 'disableAutoSolve';
 
