@@ -74,8 +74,3 @@ Send a POST request to the crawler with an array of actions. Example:
 - Bright Data account
 ## License
 MIT
-
-```plaintext
-
-This README provides a comprehensive overview of your project, including setup instructions, usage examples, and supported features. It maintains a professional tone while being informative and easy to follow.
-```
